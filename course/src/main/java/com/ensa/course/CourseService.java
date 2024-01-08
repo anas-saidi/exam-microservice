@@ -25,7 +25,7 @@ public class CourseService {
         var course = repository.findById(courseId)
                 .orElse(
                         Course.builder()
-                                .title("NOT_FOUND")
+                                .title("UNKNOWN")
                                 .build()
                 );
         var students = client.findAllStudentsByCourse(courseId);
